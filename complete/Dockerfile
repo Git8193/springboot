@@ -1,5 +1,5 @@
 
-FROM openjdk
+FROM openjdk:8u322-nanoserver
 
 COPY target/*.jar /usr/src/myapp/App.jar
 
