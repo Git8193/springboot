@@ -1,8 +1,11 @@
-apiVersion: route.openshift.io/v1       
-kind: Route
-metadata:
-  name: {{ .Release.Name}}-route
-spec:   
-  to:
-    kind: Service
-    name: {{ .Release.Name}}-service 
+replicaCount: 1
+
+image:
+  repository: https://kutralalingam81.jfrog.io/artifactory/default-docker-virtual/podman1/
+  tag: "1.0"
+service:
+  type: Clusterip
+  port: 8080
+
+run: myapp
+ 
